@@ -22,6 +22,7 @@ public class ExcelUtil {
             workBook = WorkbookFactory.create(fileInputStream);
             //getting the worksheet
             workSheet = workBook.getSheet(sheetName);
+            //asserting if sheet has data or not
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -120,5 +121,17 @@ public class ExcelUtil {
             }
         }
         return data;
+    }
+    public List<String> getSheetNames(){
+        List<String> sheetNames=new ArrayList<>();
+        try {
+            int numberOfSheets = workBook.getNumberOfSheets();
+            for ( int i = 0; i < numberOfSheets; i++ ) {
+                sheetNames.add(workBook.getSheetName(i));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return sheetNames;
     }
 }
