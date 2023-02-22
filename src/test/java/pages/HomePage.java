@@ -17,11 +17,25 @@ public class HomePage {
     @FindBy(id = "account-menu")
     public WebElement account_menu;
 
-    @FindBy(id = "login-item")
+    @FindBy(xpath = "//a[contains(@href,'login')]")
     public WebElement linkLogin;
 
-    @FindBy(xpath = "//a[@href='/account/register']")  //a[contains(@href,'/account/register')]
+    @FindBy(xpath = "//a[contains(@href,'register')]")
     public WebElement linkRegister;
+
+    @FindBy(xpath = "//li[@id='account-menu']//a//span")
+    public WebElement account_menu_user_id;
+
+    @FindBy(xpath = "//a[@href='/account/settings']")
+    public WebElement linkUserSettings;
+
+    @FindBy(xpath = "//a[@href='/account/password']")
+    public WebElement linkUserPassword;
+
+    @FindBy(xpath = "//a[contains(@href,'logout')]")
+    public WebElement linkSignout;
+
+
 
 
 }

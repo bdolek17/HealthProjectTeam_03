@@ -42,6 +42,7 @@ public class Driver {
                 options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                 options.setExperimentalOption("detach", true); //prevent auto closing when test finishes
                 driver = new ChromeDriver(options);
+                //driver = new ChromeDriver();
             } else if ("firefox".equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();

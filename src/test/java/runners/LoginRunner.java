@@ -6,18 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {
-                "pretty",
-                "html:target/default-cucumber-reports.html",
-                "rerun:target/failedRerun.txt"
-        },
         monochrome=true,
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions", "hooks"},
+        glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@ResetUpdates"
-
+        tags = "@login_as_staff"
 )
-public class UITestRunner {
-
+public class LoginRunner {
 }
