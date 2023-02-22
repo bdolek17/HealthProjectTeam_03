@@ -1,5 +1,6 @@
 @registration
   Feature: Registration
+    @registration_positive_scenario
     Scenario: Registration_As_Patient
       Given user is on "https://medunna.com" page
       When user clicks on the account menu icon on home page
