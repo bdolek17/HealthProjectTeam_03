@@ -4,9 +4,11 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.HomePage;
 import pages.RegistrationPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US01_UI_TC001 {
 
@@ -60,6 +62,8 @@ public class US01_UI_TC001 {
     }
     @Then("user should see {string} message on the page")
     public void user_should_see_message_on_the_page(String string) {
+        ReusableMethods.waitForVisibility(registrationPage.savedMessage,3);
+        Assert.assertEquals("Registration Saved",registrationPage.savedMessage);
 
     }
 
