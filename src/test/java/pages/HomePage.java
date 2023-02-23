@@ -15,7 +15,7 @@ public class HomePage {
     public WebElement roomOption;
 
     @FindBy(id = "account-menu")
-    public WebElement account_menu;
+    public WebElement accountMenu;
 
     @FindBy(xpath = "//a[contains(@href,'login')]")
     public WebElement linkLogin;
@@ -24,12 +24,12 @@ public class HomePage {
     public WebElement linkRegister;
 
     @FindBy(xpath = "//li[@id='account-menu']//a//span")
-    public WebElement account_menu_user_id;
+    public WebElement accountMenuUserName;
 
-    @FindBy(xpath = "//a[@href='/account/settings']")
+    @FindBy(xpath = "//a[contains(@href,'settings')]")
     public WebElement linkUserSettings;
 
-    @FindBy(xpath = "//a[@href='/account/password']")
+    @FindBy(xpath = "//a[contains(@href,'password')]")
     public WebElement linkUserPassword;
 
     @FindBy(xpath = "//a[contains(@href,'logout')]")

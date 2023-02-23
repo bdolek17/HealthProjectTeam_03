@@ -1,8 +1,10 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
+import utilities.Driver;
 import utilities.JSUtils;
 
 public class LoginStepDefinitions {
@@ -12,15 +14,11 @@ public class LoginStepDefinitions {
 
     @When("user clicks on the account menu icon on home page")
     public void user_clicks_on_the_account_menu_icon_on_home_page() {
-        homePage.account_menu.click();
+        homePage.accountMenu.click();
     }
     @When("user clicks on the sign in link on login page")
     public void user_clicks_on_the_sign_in_link_on_login_page() {
-        try{
-            homePage.linkLogin.click();
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
+        homePage.linkLogin.click();
     }
     @When("user enters the username {string} on login page")
     public void user_enters_the_username_on_login_page(String username) {
@@ -34,6 +32,11 @@ public class LoginStepDefinitions {
     public void user_clicks_on_sign_in_button_on_login_page() {
         JSUtils.clickElementByJS(loginPage.btnSignin);
     }
-
+    @When("verify user logged in")
+    public void verify_user_logged_in() {
+        Driver.waitForClickablility(homePage.accountMenuUserName,3);
+        String userName= homePage.accountMenuUserName.getText();
+        Assert.assertTrue(userName.length()>0);
+    }
 
 }

@@ -9,6 +9,8 @@ public class UserSettingsPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(id = "settings-title")
+    public WebElement settingsPageHeader;
     @FindBy(id="firstName")
     public WebElement inputFirstName;
 
@@ -20,5 +22,14 @@ public class UserSettingsPage {
 
     @FindBy(xpath="//form[@id='settings-form']//button")
     public WebElement btnSave;
+
+    @FindBy(xpath = "//*[text()='Settings saved!']")
+    public WebElement settingsSaveAlertBox;
+
+    @FindBy(xpath = "//div[text()='Your first name is required.']")
+    public WebElement firstNameIsRequiredMessageText;
+
+    @FindBy(xpath = "//div[text()='Your last name is required.']")
+    public WebElement lastNameIsRequiredMessageText;
 
 }
