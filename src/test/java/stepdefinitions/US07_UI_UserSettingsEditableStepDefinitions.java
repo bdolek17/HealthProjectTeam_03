@@ -18,8 +18,8 @@ public class US07_UI_UserSettingsEditableStepDefinitions {
     public void user_clicks_save_button() {
         settingsPage.btnSave.click();
     }
-    @When("user clicks on the sign out link on login page")
-    public void user_clicks_on_the_sign_out_link_on_login_page() {
+    @When("user clicks on the sign out link on home page")
+    public void user_clicks_on_the_sign_out_link_on_home_page() {
         Driver.waitForClickablility(homePage.accountMenuUserName,10);
         Driver.waitAndClick(homePage.linkSignout,3);
     }

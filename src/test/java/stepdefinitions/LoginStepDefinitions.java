@@ -16,8 +16,8 @@ public class LoginStepDefinitions {
     public void user_clicks_on_the_account_menu_icon_on_home_page() {
         homePage.accountMenu.click();
     }
-    @When("user clicks on the sign in link on login page")
-    public void user_clicks_on_the_sign_in_link_on_login_page() {
+    @When("user clicks on the sign in link on home page")
+    public void user_clicks_on_the_sign_in_link_on_home_page() {
         homePage.linkLogin.click();
     }
     @When("user enters the username {string} on login page")

@@ -10,8 +10,8 @@ public class US07_UI_UserInfoStepDefinitions {
     HomePage homePage=new HomePage();
     UserSettingsPage settingsPage=new UserSettingsPage();
 
-    @When("user clicks on the settings link on login page")
-    public void user_clicks_on_the_settings_link_on_login_page() {
+    @When("user clicks on the settings link on home page")
+    public void user_clicks_on_the_settings_link_on_home_page() {
         homePage.linkUserSettings.click();
     }
 

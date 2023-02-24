@@ -3,11 +3,22 @@ package hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
+import utilities.RequestSpec;
 
 public class Hooks {
+
+
+    @Before(value = "@ApiRegistrationTest")
+    public void setUpSpecForRegistration(){
+         RequestSpec.setSpecWithAuthorization();
+    }
+
+
     /*
     Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
      */

@@ -20,6 +20,6 @@ Feature:  (User info segment (User Settings) should be editable on Homepage)
     Examples: test_data
       | username    | password   |
       | AdminTeam03 | Team03+    |
-      | patient.t03 | Team03+    |
-      #| staff.t03   | Team03+    |
-      #| doctor.t03  | Team03+    |
+      | patient03.t03 | Team03+    |
+      #| staff03.t03   | Team03+    |
+      #| doctor03.t03  | Team03+    |

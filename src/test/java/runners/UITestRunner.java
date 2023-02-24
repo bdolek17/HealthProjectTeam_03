@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@US07_TC005"
+        tags = "@US07_ResetUpdates"
 
 )
 public class UITestRunner {

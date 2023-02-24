@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@login_as_staff"
+        tags = "@login_as_admin"
 )
 public class LoginRunner {
 }
