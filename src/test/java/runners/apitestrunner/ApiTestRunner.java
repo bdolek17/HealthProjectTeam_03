@@ -1,4 +1,4 @@
-package runners;
+package runners.apitestrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -14,10 +14,9 @@ import org.junit.runner.RunWith;
         monochrome=true,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = false,
-        tags = "@login_patient"
+        dryRun = true,
+        tags = "@Api_US11"
 
 )
-public class UITestRunner {
-
+public class ApiTestRunner {
 }
