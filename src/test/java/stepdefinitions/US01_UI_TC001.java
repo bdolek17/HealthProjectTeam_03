@@ -16,6 +16,11 @@ public class US01_UI_TC001 {
     RegistrationPage registrationPage=new RegistrationPage();
 
     Faker faker = new Faker();
+    @Given("user is on {string} registration page")
+    public void userIsOnRegistrationPage(String arg0) {
+
+        Driver.getDriver().get(arg0);
+    }
 
 
     @When("user clicks on the sign in link on registration page")
@@ -66,6 +71,7 @@ public class US01_UI_TC001 {
         Assert.assertEquals("Registration Saved",registrationPage.savedMessage);
 
     }
+
 
 
 }

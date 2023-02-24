@@ -2,7 +2,7 @@
 Feature: Login_As
   @login_as_admin
   Scenario: Login_As_Admin
-    Given user is on "https://medunna.com" page
+    Given user is on "https://medunna.com/" page
     When user clicks on the account menu icon on home page
     And user clicks on the sign in link on login page
     And user enters the username "AdminTeam03" on login page
