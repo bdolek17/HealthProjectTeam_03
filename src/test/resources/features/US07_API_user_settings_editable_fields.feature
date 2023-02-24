@@ -6,9 +6,9 @@ Feature:  (User info segment (User Settings) should be editable on Homepage)
 
   @US07_API_firstname_verification
   Scenario Outline: Verification of firstname
-    Given user sets the necessary path params with "<SSN>" for user info
+    Given user sets the necessary path params with "<TC006_ssn>" for user info
     When user sends GET request and gets the response
-    Then user verifies then firstname field has "<firstname>" value
+    Then user verifies then firstname field has "<TC006_firstname>" value
     Examples: User Info
       | TC006_ssn       | TC006_firstname |
-      | staff03.t03         | Patient-03-updated  |
+      | 333-33-5331         | Patient-03-updated  |
