@@ -22,6 +22,7 @@ Feature: Login_As
 
   @login_as_staff
   Scenario: Login_As_Staff
+
     Given user is on medunna home page
     When user clicks on the account menu icon on home page
     And user clicks on the sign in link on home page

@@ -1,4 +1,4 @@
-package runners;
+package runners.dbtestrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

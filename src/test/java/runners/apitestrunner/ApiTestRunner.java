@@ -1,4 +1,4 @@
-package runners;
+package runners.apitestrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -16,6 +16,8 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
         tags = "@ApiRegistrationTest"
+        //dryRun = true,
+        //tags = "@Api_US11"
 
 )
 public class ApiTestRunner {

@@ -38,5 +38,8 @@ public class HomePage {
 
 
 
+
+    @FindBy(xpath = "//a[@href='#']")
+    public WebElement userIcon;
 }
 
