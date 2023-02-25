@@ -33,6 +33,9 @@ public class RegistrationPage {
     @FindBy(id = "register-submit")
     public WebElement btnRegisterSubmit;
 
+    @FindBy(xpath = "//*[.='Registration Saved']")
+    public WebElement savedMessage;
+
 
 }
 
