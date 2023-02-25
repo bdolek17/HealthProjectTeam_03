@@ -8,6 +8,7 @@ import utilities.Driver;
 public class US01_UI_TC001 {
     @Given("the user is on {string} registration pages")
     public void the_user_is_on_registration_pages(String url1) {
+
         Driver.getDriver().get(url1);
     }
     @When("user clicks on the account menu icons")
