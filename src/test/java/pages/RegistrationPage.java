@@ -33,6 +33,9 @@ public class RegistrationPage {
     @FindBy(id = "register-submit")
     public WebElement btnRegisterSubmit;
 
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement registrationSaved;
+
 
 }
 
