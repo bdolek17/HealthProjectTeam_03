@@ -15,9 +15,9 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@edit_as_doctor"
+        tags = "@edit"
 
 )
-public class UITestRunner {
+public class US012_UI_TestRunner {
 
 }
