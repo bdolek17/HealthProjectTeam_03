@@ -35,11 +35,17 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(@href,'logout')]")
     public WebElement linkSignout;
 
-
-
-
-
     @FindBy(xpath = "//a[@href='#']")
     public WebElement userIcon;
+
+    @FindBy(xpath = "//li[@id='entity-menu']//a")  //S.A.
+    public WebElement linkMyPages;
+
+    @FindBy(xpath = "//a[contains(@href,'search-patient') and @role='menuitem']")  //S.A.
+    public WebElement linkSearchPatient;
+
+    @FindBy(xpath = "//a[contains(@href,'ps-in-patient') and @role='menuitem']")  //S.A.
+    public WebElement linkInPatient;
+
 }
 

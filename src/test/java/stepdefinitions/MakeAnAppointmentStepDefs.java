@@ -13,11 +13,11 @@ public class MakeAnAppointmentStepDefs {
    MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage();
    PatientsPage patientsPage = new PatientsPage();
 
-   @Given("user is on {string} page")
-   public void user_is_on_page(String health_project_url) {
-      Driver.getDriver().get(health_project_url);
-
-   }
+//   @Given("user is on {string} page")
+//   public void user_is_on_page(String health_project_url) {
+//      Driver.getDriver().get(health_project_url);
+//
+//   }
    @When("user click on my pages")
    public void user_click_on_my_pages() {
       patientsPage.myPages.click();

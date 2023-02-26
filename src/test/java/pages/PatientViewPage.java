@@ -9,6 +9,9 @@ public class PatientViewPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(xpath = "//div[@id='app-view-container']//h2") //S.A.
+    public WebElement labelPatientDetailHeader;
+
 
 
 
