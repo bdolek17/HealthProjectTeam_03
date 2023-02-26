@@ -11,6 +11,8 @@ public class US11_UI_TC01 {
 
     @Given("user goes on {string} page")
     public void user_goes_on_page(String string) {
+        Driver.getDriver().get(string);
+
     }
     @When("user click on the account menu icon on home page")
     public void user_click_on_the_account_menu_icon_on_home_page() {

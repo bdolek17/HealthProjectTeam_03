@@ -15,10 +15,10 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@dr_login_appointments"
+        tags = "@registration"
 
 
 )
-public class UITestRunner {
+public class US01_UI_Runner {
 
 }

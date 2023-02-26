@@ -1,14 +1,19 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.LoginPage;
+import utilities.Driver;
 import utilities.JSUtils;
 
 public class LoginStepDefinitions {
     HomePage homePage=new HomePage();
     LoginPage loginPage=new LoginPage();
-
+    @Given("user is on {string} page")
+    public void user_is_on_page(String string)  {
+        Driver.getDriver().get(string);
+    }
 
     @When("user clicks on the account menu icon on home page")
     public void user_clicks_on_the_account_menu_icon_on_home_page() {
