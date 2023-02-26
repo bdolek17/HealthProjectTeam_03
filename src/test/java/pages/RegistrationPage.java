@@ -12,6 +12,9 @@ public class RegistrationPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(id = "account-menu")
+    public WebElement account_menu;
+
     @FindBy(xpath = "//a[@href='/account/register']")  //a[contains(@href,'/account/register')]
     public WebElement linkRegister;
 
