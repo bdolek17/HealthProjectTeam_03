@@ -14,6 +14,12 @@ public class LoginStepDefinitions {
     public void user_clicks_on_the_account_menu_icon_on_home_page() {
         homePage.account_menu.click();
     }
+
+    @When("user clicks on the account menu icon on home page")
+    public void patient_clicks_on_the_account_menu_icon_on_home_page() {
+        homePage.account_menu.click();
+    }
+
     @When("user clicks on the sign in link on login page")
     public void user_clicks_on_the_sign_in_link_on_login_page() {
         try{

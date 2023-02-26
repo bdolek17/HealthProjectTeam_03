@@ -15,7 +15,8 @@ public class HomePage {
     public WebElement roomOption;
 
     @FindBy(id = "account-menu")
-    public WebElement account_menu;
+    public WebElement account_menu  ;
+
 
     @FindBy(id = "login-item")
     public WebElement linkLogin;
