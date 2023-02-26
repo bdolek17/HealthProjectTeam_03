@@ -1,4 +1,4 @@
-package runners;
+package runners.dbtestrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -18,5 +18,5 @@ import org.junit.runner.RunWith;
         tags = "@user_registration"
 
 )
-public class ApiTestRunner {
+public class DBTestRunner {
 }

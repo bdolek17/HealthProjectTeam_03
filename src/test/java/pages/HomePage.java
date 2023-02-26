@@ -25,5 +25,8 @@ public class HomePage {
     public WebElement linkRegister;
 
 
+
+    @FindBy(xpath = "//a[@href='#']")
+    public WebElement userIcon;
 }
 
