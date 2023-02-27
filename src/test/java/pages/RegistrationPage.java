@@ -33,8 +33,11 @@ public class RegistrationPage {
     @FindBy(id = "register-submit")
     public WebElement btnRegisterSubmit;
 
-    @FindBy(xpath = "//div[contains(text(),’Registration Saved’)]")
-    public WebElement savedMessage;
+    @FindBy(xpath = "//div[contains(text(),'Registration Saved')]")
+    public WebElement registrationSaved;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement invalidSSNmessage;
 
 
 }

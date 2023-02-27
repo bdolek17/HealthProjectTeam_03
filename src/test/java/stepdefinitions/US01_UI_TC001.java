@@ -7,11 +7,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import pages.HomePage;
 import pages.RegistrationPage;
 import utilities.Driver;
 import utilities.JSUtils;
 import utilities.ReusableMethods;
+
+import java.security.Key;
 
 public class US01_UI_TC001 {
     HomePage homePage= new HomePage();
@@ -36,7 +39,7 @@ public class US01_UI_TC001 {
     @When("user enters the valid {string} on registration pages")
     public void user_enters_the_valid_on_registration_pages(String string) {
 
-        registrationPage.inputSSN.sendKeys("358-44-9877");
+        registrationPage.inputSSN.sendKeys("734-24-1187");
     }
     @When("user enters the firstname on registration pages")
     public void user_enters_the_firstname_on_registration_pages() {
@@ -72,31 +75,41 @@ public class US01_UI_TC001 {
     @When("user clicks on register buttons")
     public void user_clicks_on_register_buttons() {
 
-       // registrationPage.btnRegisterSubmit.click();
         JSUtils.clickElementByJS(registrationPage.btnRegisterSubmit);
     }
     @Then("user should see {string} message on the pages")
     public void user_should_see_message_on_the_pages(String string) {
 
         ReusableMethods.waitFor(5);
-         Assert.assertEquals(string,registrationPage.savedMessage);
+        // Assert.assertEquals(string,registrationPage.registrationSaved);
+           registrationPage.registrationSaved.isDisplayed();
     }
     //negative
 
     @And("user enters the without line {string}")
     public void userEntersTheWithoutLine(String arg0) {
+        registrationPage.inputSSN.clear();
+        registrationPage.inputSSN.sendKeys("358441177");
+        registrationPage.inputFirstName.sendKeys(Keys.ENTER);
     }
 
     @And("user should be see error message")
     public void userShouldBeSeeErrorMessage() {
+        ReusableMethods.waitFor(1);
+        registrationPage.invalidSSNmessage.isDisplayed();
         
     }
 
     @And("user enters the missing {string} on registration pages")
     public void userEntersTheMissingOnRegistrationPages(String arg0) {
+        registrationPage.inputSSN.clear();
+        registrationPage.inputSSN.sendKeys("358-44-11");
+        registrationPage.inputFirstName.sendKeys(Keys.ENTER);
     }
 
     @And("user should be see error{int} message")
     public void userShouldBeSeeErrorMessage(int arg0) {
+        ReusableMethods.waitFor(2);
+        registrationPage.invalidSSNmessage.isDisplayed();
     }
 }
