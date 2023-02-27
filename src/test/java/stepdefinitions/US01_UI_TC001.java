@@ -39,7 +39,7 @@ public class US01_UI_TC001 {
     @When("user enters the valid {string} on registration pages")
     public void user_enters_the_valid_on_registration_pages(String string) {
 
-        registrationPage.inputSSN.sendKeys("734-24-1187");
+        registrationPage.inputSSN.sendKeys("664-24-1177");
     }
     @When("user enters the firstname on registration pages")
     public void user_enters_the_firstname_on_registration_pages() {
