@@ -10,7 +10,8 @@ public class PhysicianAppointmentPage {
     }
     @FindBy(id="entity-menu")
     public WebElement myPages;
-    @FindBy(xpath = "//*[@id=\"entity-menu\"]/div/a[1]/span")
+
+    @FindBy(xpath = "//a[@class='dropdown-item active']")
     public WebElement myAppointments;
 
     @FindBy(id= "fromDate")

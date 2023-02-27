@@ -24,6 +24,7 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='/account/register']")  //a[contains(@href,'/account/register')]
     public WebElement linkRegister;
 
-
+    @FindBy(xpath = "//a[@href='#']")
+    public WebElement userIcon;
 }
 

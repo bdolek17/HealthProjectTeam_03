@@ -1,10 +1,10 @@
 @edit
   Feature: Edit
-    @edit_as_doctor
+
 
 
 Scenario: Edit_As_doctor
-Given user is on "https://medunna.com" page
+Given user is a on "https://medunna.com" page
 When user clicks on the account menu icon on home page
 And user clicks on the sign in link on login page
 And user enters the username "doctor.t03" on login page
