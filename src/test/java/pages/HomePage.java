@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,8 +23,6 @@ public class HomePage {
 
     @FindBy(xpath = "//a[@href='/account/register']")  //a[contains(@href,'/account/register')]
     public WebElement linkRegister;
-
-
 
     @FindBy(xpath = "//a[@href='#']")
     public WebElement userIcon;

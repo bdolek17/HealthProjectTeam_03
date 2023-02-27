@@ -205,7 +205,10 @@ public class Driver {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command, element);
     }
-    public static void selectAnItemFromDropdown(WebElement item, String selectableItem) {
+
+
+    public static void selectAnItemFromDropdown(WebElement item,String selectableItem) {
+
         wait(5);
         Select select = new Select(item);
         for (int i = 0; i < select.getOptions().size(); i++) {
