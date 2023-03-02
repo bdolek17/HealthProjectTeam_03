@@ -1,4 +1,4 @@
-package runners.uitestunner;
+package runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,13 +15,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        //tags = "@registration_user_email"
-        //tags = "@registration_username_negative"
-        //tags = "@registration_email_negative"
-        tags = "@Registration_US02"
-
+        tags = "@Doctor_Patient_info"
 
 )
-
-public class US02_Runner {
+public class US15_Runner {
 }
