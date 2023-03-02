@@ -14,3 +14,13 @@ Feature: Registration
     And user enters the confirmation password on registration pages
     And user clicks on register buttons
     Then user should see "Registration Saved" message on the pages
+
+    @registration_invalid_SSN
+    Scenario: Registration_invalid_SSN
+      Given the user is on "https://medunna.com" registration pages
+      When user clicks on the account menu icons
+      And user clicks on the sign in link on registration pages
+      And user enters the missing "SSN" on registration pages
+      And user should be see error message
+      And user enters the without line "SSN"
+      And user should be see error2 message
