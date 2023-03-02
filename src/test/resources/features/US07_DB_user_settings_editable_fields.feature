@@ -16,12 +16,12 @@ Feature:  (User info segment (User Settings) should be editable on Homepage)
       | patient03.t03   | Patient-03-updated  |
 
 
-  @US07_TC008_DB_firstname_verification #for US07_TC006
+  @US07_TC008_DB_lastname_verification #for US07_TC006
   Scenario Outline: TC008-Verification of firstname (DB)
     Given connect to medunna database
     And get all records from "jhi_user" with the "*" columns where "login" column has "<TC008_username>" value
     And  verify resultset "last_name" column contains "<TC008_lastname>" data
     Then close the database connection
     Examples: User Info
-      | TC008_username  | TC008_lastname     |
+      | TC008_username  | TC008_lastname |
       | patient03.t03   | Hasta-updated  |

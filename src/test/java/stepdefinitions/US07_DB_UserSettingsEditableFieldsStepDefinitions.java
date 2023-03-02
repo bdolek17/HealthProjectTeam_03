@@ -34,7 +34,7 @@ public class US07_DB_UserSettingsEditableFieldsStepDefinitions {
 
         resultSetAsMapObject=DBUtils.getQueryResultMap(myQuery);
         //System.out.println("---DBUtils.getQueryResultMap(myQuery)---");
-        //System.out.println(rowListAsMap);
+        //System.out.println(resultSetAsMapObject);
     }
     @Given("verify resultset {string} column contains {string} data")
     public void verify_resultset_column_contains_data(String queryFiledName, String expectedValue) {

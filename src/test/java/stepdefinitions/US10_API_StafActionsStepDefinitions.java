@@ -8,14 +8,14 @@ import io.restassured.path.json.JsonPath;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Assert;
+import utilities.ApiUtilities;
 import utilities.JSONUtils;
-import utilities.RequestSpec;
 
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static stepdefinitions.StepDefinitionsUtilities.responseMedunna;
-import static utilities.RequestSpec.specMedunna;
+import static utilities.ApiUtilities.responseMedunna;
+import static utilities.ApiUtilities.specMedunna;
 
 public class US10_API_StafActionsStepDefinitions {
 
@@ -55,7 +55,7 @@ public class US10_API_StafActionsStepDefinitions {
 
     @When("user sends GET request to {string} endpoint with {string} id and gets the response")
     public void user_sends_get_request_to_endpoint_with_id_and_gets_the_response(String endpointParam, String patientId) {
-        RequestSpec.setSpecWithAuthorization();
+        ApiUtilities.setSpecWithAuthorization();
         specMedunna.pathParams("first",endpointParam,"second",patientId);
         responseMedunna=given().spec(specMedunna).when().get("{first}/{second}");
         responseMedunna.prettyPrint();

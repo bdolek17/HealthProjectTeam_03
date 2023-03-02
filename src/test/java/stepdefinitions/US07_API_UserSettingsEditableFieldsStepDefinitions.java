@@ -5,19 +5,19 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import utilities.ApiUtilities;
 import utilities.JSONUtils;
-import utilities.RequestSpec;
 
 import static io.restassured.RestAssured.given;
-import static stepdefinitions.StepDefinitionsUtilities.responseMedunna;
-import static utilities.RequestSpec.specMedunna;
+import static utilities.ApiUtilities.responseMedunna;
+import static utilities.ApiUtilities.specMedunna;
 
 public class US07_API_UserSettingsEditableFieldsStepDefinitions {
     //Response response;
     User user;
     @Given("user sets the request specification")
     public void user_sets_the_request_specification() {
-        RequestSpec.setSpecWithAuthorization();
+        ApiUtilities.setSpecWithAuthorization();
     }
     @When("user sends GET request to {string} with {string} query string and gets the response")
     public void user_sends_get_request_to_with_query_string_and_gets_the_response(String endpointParam, String queryStringValue) {
@@ -37,5 +37,11 @@ public class US07_API_UserSettingsEditableFieldsStepDefinitions {
     public void user_verifies_then_firstname_field_has_value(String expectedValue) {
         user= JSONUtils.convertJsonToJavaObject(responseMedunna.asString(), User.class);
         Assert.assertEquals(expectedValue,user.getFirstName());
+    }
+
+    @Then("user verifies then lastname field has {string} value")
+    public void user_verifies_then_lastname_field_has_value(String expectedValue) {
+        user= JSONUtils.convertJsonToJavaObject(responseMedunna.asString(), User.class);
+        Assert.assertEquals(expectedValue,user.getLastName());
     }
 }

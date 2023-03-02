@@ -11,8 +11,9 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class RequestSpec {
+public class ApiUtilities {
 
+    public static Response responseMedunna;
     public static RequestSpecification specMedunna;
 
     private static String generateMedunnaToken(){

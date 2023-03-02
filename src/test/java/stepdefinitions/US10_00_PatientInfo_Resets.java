@@ -6,15 +6,15 @@ import api.pojos.PatientS;
 import api.pojos.User;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
-import utilities.RequestSpec;
+import utilities.ApiUtilities;
 
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static stepdefinitions.StepDefinitionsUtilities.responseMedunna;
-import static utilities.RequestSpec.specMedunna;
+import static utilities.ApiUtilities.responseMedunna;
+import static utilities.ApiUtilities.specMedunna;
 
-public class US10_Resets {
+public class US10_00_PatientInfo_Resets {
     PatientS patient=new PatientS();
     User user=new User();
 
@@ -46,7 +46,7 @@ public class US10_Resets {
         patient.setPhone(resetInfo.get("phone"));
         patient.setSsn(resetInfo.get("ssn"));
 
-        RequestSpec.setSpecWithAuthorization();
+        ApiUtilities.setSpecWithAuthorization();
 
         specMedunna.pathParams("first",endpoint);
         //responseMedunna=given().spec(specMedunna).contentType(ContentType.JSON).body(patient).when().put("{first}");

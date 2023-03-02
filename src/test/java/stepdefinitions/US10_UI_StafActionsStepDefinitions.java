@@ -65,6 +65,7 @@ public class US10_UI_StafActionsStepDefinitions {
             patient.setUser(user);
 
             Driver.waitAndClick(viewButton,2);
+            Driver.wait(2);
 
         }
     }

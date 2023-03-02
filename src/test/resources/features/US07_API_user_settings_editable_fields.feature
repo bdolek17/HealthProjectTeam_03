@@ -6,6 +6,7 @@ Feature:  (User info segment (User Settings) should be editable on Homepage)
 
   @US07_TC003_API_firstname_verification  #for US07_TC002
   @FirstNameUpdateTest
+  @ApiTest
   Scenario Outline: TC003-Verification of firstname (API)
     Given user sets the request specification
     When user sends GET request to "user" with "<TC003_ssn>" query string and gets the response
@@ -15,12 +16,13 @@ Feature:  (User info segment (User Settings) should be editable on Homepage)
       | TC003_ssn       | TC003_firstname |
       | 333-33-5331     | Patient-03-updated  |
 
-  @US07_TC007_API_firstname_verification  #for US07_TC006
+  @US07_TC007_API_lastname_verification  #for US07_TC006
+  @ApiTest
   Scenario Outline: TC007-Verification of firstname (API)
     Given user sets the request specification
     When user sends GET request to "user" with "<TC007_ssn>" query string and gets the response
     Then user verifies status code is 200
-    And user verifies then firstname field has "<TC007_firstname>" value
+    And user verifies then lastname field has "<TC007_lastname>" value
     Examples: User Info
-      | TC007_ssn       | TC007_firstname |
-      | 333-33-5331     | Patient-03-updated  |
+      | TC007_ssn       | TC007_lastname |
+      | 333-33-5331     | Hasta-updated  |

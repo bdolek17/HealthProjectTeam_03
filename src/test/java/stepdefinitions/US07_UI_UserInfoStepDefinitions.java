@@ -19,5 +19,6 @@ public class US07_UI_UserInfoStepDefinitions {
     public void user_verifies_the_setting_page() {
         Driver.waitForVisibility(settingsPage.settingsPageHeader,3);
         Assert.assertTrue(settingsPage.settingsPageHeader.isDisplayed());
+        Driver.wait(5);
     }
 }

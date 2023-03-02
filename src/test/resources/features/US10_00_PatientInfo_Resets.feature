@@ -3,8 +3,8 @@ Feature: (Staff role) Staff should View, edit and delete Patient information Val
   As a <staff>,
   I want to view patient informations,
   so that I can View, edit and delete Patient information
-  @US10_TC007_ResetPatientUpdates
-  Scenario: TC07_Resetting Patient Update
+  @US10_TC010_ResetPatientUpdates
+  Scenario: TC10_Resetting Patient Update
     Given user is on medunna home page
     When user clicks on the account menu icon on home page
     And user clicks on the sign in link on home page
