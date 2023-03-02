@@ -1,8 +1,10 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.HomePage;
 import pages.MakeAppointmentPage;
 import utilities.Driver;
@@ -50,6 +52,18 @@ public class US06_UI_TC001 {
 
     @Then("The user should see appointment registration saved message")
     public void theUserShouldSeeAppointmentRegistrationSavedMessage() {
-        //makeAppointmentPage.AppRegistrationSuccessMessage.isDisplayed();
+
+    }
+
+    @And("{int}--The user enter invalidSSN")
+    public void theUserEnterInvalidSSN(int arg0) {
+        makeAppointmentPage.ssnInput.sendKeys("457-88-3");
+       makeAppointmentPage.emailInput.sendKeys("a");
+    }
+
+    @And("{int}-The user should error message")
+    public void theUserShouldErrorMessage(int arg0) {
+        Assert.assertEquals("Your SSN is invalid",makeAppointmentPage.invalidSSNmessage.getText());
+
     }
 }

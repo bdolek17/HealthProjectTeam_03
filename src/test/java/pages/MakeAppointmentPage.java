@@ -43,6 +43,12 @@ public class MakeAppointmentPage {
     @FindBy(id = "register-submit")
     public WebElement sendRequest;
 
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement invalidSSNmessage;
+
+    @FindBy(xpath ="//span[.='Appointment registration saved!'")
+    public WebElement appSaved;
+
 
 
 
