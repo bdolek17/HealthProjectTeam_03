@@ -27,7 +27,7 @@ import org.junit.runner.RunWith;
 //        tags = "@US07_ResetUserInfoUpdates"
 //--------------------------------------------------
 //        tags = "@US10_TC001"
-        tags = "@US10_TC002_API_patient_verification"
+//        tags = "@US10_TC002_API_patient_verification"
 //        tags = "@US10_TC003_DB_patient_verification"
 //        tags = "@US10_TC004"
 //        tags = "@US10_TC005_API_patient_verification_by_ssn"
@@ -35,7 +35,9 @@ import org.junit.runner.RunWith;
 //        tags = "@US10_TC007"
 //        tags = "@US10_TC008_API_patient_update_verification_by_ssn"
 //        tags = "@US10_TC009_DB_patient_update_verification_by_ssn"
-//        tags = "@US10_TC010_ResetPatientUpdates"
+//        tags = "@US10_TC010_ResetPatientUpdates
+// --------------------------------------------------
+        tags = "@ApiUserRegister"
 
 )
 public class Saban_UI_TestRunner {
