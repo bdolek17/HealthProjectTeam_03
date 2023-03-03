@@ -1,4 +1,4 @@
-package runners.apitestrunner;
+package runners.dbtestrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@Api_US06"
+        tags = "@US10_TC009_DB_patient_update_verification_by_ssn"
 
 )
-public class ApiTestRunner {
+public class Saban_DB_TestRunner {
 }
