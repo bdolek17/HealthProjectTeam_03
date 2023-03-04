@@ -14,15 +14,15 @@ import static org.junit.Assert.assertEquals;
 import static utilities.MedunnaAuthentication.generateToken;
 
 public class US06_API_TC01 {
-    US06_API_appointment[] us06_api_appointments;
+
     US06_API_appointment expectedBody=new US06_API_appointment();
     Response response;
     @Given("the users sends POST requests to the {string}")
     public void the_users_sends_post_requests_to_the(String url) {
-        expectedBody.setEmail("a.yila@gmail.com");
-        expectedBody.setFirstName("eymen");
+        expectedBody.setEmail("dannie.kuhlman@gmail.com");
+        expectedBody.setFirstName("arlena.johns");
         expectedBody.setLastName("etka");
-        expectedBody.setSsn("389-38-3896");
+        expectedBody.setSsn("571-22-0242\n");
         expectedBody.setBirthDate("2017-02-27T20:02:54.487Z");
         expectedBody.setStartDate("2023-02-27");
         expectedBody.setSnumber("52345");
@@ -50,7 +50,7 @@ public class US06_API_TC01 {
       //  US06_API_appointment actualData = response.as(api.pojos.US06_API_appointment.class);
         ObjectMapper objectMapper = new ObjectMapper();
         US06_API_appointment actualData = objectMapper.readValue(response.asString(), US06_API_appointment.class);
-       // assertEquals(expectedBody.getEmail(),actualData.getEmail());
+        assertEquals(expectedBody.getEmail(),actualData.getEmail());
         assertEquals(expectedBody.getFirstName(),actualData.getFirstName());
         assertEquals(expectedBody.getLastName(),actualData.getLastName());
         assertEquals(expectedBody.getSsn(),actualData.getSsn());

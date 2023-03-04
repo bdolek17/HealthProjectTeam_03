@@ -2,6 +2,8 @@ package api.pojos;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
+import java.util.Arrays;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class US01_02_API_registration {
     private Boolean activated;
@@ -18,15 +20,14 @@ public class US01_02_API_registration {
     private String login;
     private String password;
     private String ssn;
-    private Object authorities;
+    private String [] authorities;
 
     public US01_02_API_registration() {
     }
 
     public US01_02_API_registration(Boolean activated, String createdBy, String createdDate, String email, String firstName,
-                                    int id, String imageUrl, String langKey, String lastModifiedBy,
-                                    String lastModifiedDate, String lastName,
-                                    String login, String password, String ssn, Object authorities) {
+                                    int id, String imageUrl, String langKey, String lastModifiedBy, String lastModifiedDate, String lastName,
+                                    String login, String password, String ssn, String[] authorities) {
         this.activated = activated;
         this.createdBy = createdBy;
         this.createdDate = createdDate;
@@ -164,17 +165,17 @@ public class US01_02_API_registration {
         this.activated = activated;
     }
 
-    public Object getAuthorities() {
+    public String[] getAuthorities() {
         return authorities;
     }
 
-    public void setAuthorities(Object authorities) {
+    public void setAuthorities(String[] authorities) {
         this.authorities = authorities;
     }
 
     @Override
     public String toString() {
-        return "US01_API_registration{" +
+        return "US01_02_API_registration{" +
                 "activated=" + activated +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdDate='" + createdDate + '\'' +
@@ -189,7 +190,7 @@ public class US01_02_API_registration {
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", ssn='" + ssn + '\'' +
-                ", authorities=" + authorities +
+                ", authorities=" + Arrays.toString(authorities) +
                 '}';
     }
 }
