@@ -20,10 +20,6 @@ public class LoginStepDefinitions {
         homePage.account_menu.click();
     }
 
-    @When("user clicks on the account menu icon on home page")
-    public void patient_clicks_on_the_account_menu_icon_on_home_page() {
-        homePage.account_menu.click();
-    }
 
     @When("user clicks on the sign in link on login page")
     public void user_clicks_on_the_sign_in_link_on_login_page() {
@@ -38,8 +34,7 @@ public class LoginStepDefinitions {
         loginPage.inputUsername.sendKeys(username);
     }
     @When("user enters the password {string} on login page")
-    public void user_enters_the_password_on_login_page(String pwd) {
-        loginPage.inputPassword.sendKeys(pwd);
+    public void user_enters_the_password_on_login_page(String pwd) { loginPage.inputPassword.sendKeys(pwd);
     }
     @When("user clicks on sign in button on login page")
     public void user_clicks_on_sign_in_button_on_login_page() {
