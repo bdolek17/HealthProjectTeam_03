@@ -1,4 +1,4 @@
-package runners.uitestunner;
+package runners.ui_testunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,10 +15,16 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@registration"
+
+        tags = "@FirstNameUpdateTest"
 
 
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 )
-public class US01_UI_Runner {
+public class UITestRunner {
 
 }

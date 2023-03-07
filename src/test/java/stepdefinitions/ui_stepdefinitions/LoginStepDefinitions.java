@@ -1,6 +1,5 @@
-package stepdefinitions;
+package stepdefinitions.ui_stepdefinitions;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;

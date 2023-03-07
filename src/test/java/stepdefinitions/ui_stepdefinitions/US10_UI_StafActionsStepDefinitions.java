@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.ui_stepdefinitions;
 
 import api.pojos.CountryS;
 import api.pojos.CstateS;

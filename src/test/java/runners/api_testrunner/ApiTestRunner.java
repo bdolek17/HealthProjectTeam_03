@@ -1,4 +1,4 @@
-package runners.apitestrunner;
+package runners.api_testrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -14,8 +14,9 @@ import org.junit.runner.RunWith;
         monochrome=true,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = false,
-        tags = "@US07_TC001"
+        dryRun = true,
+        tags = "@Api_US11"
+
 )
-public class Saban_API_TestRunner {
+public class ApiTestRunner {
 }

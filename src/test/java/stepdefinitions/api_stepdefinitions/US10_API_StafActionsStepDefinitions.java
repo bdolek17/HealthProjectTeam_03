@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.api_stepdefinitions;
 
 import api.pojos.PatientS;
 import io.cucumber.datatable.DataTable;

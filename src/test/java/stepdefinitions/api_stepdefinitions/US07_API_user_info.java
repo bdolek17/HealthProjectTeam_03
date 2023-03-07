@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.api_stepdefinitions;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
