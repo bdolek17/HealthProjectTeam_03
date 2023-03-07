@@ -1,4 +1,4 @@
-package runners.uitestunner;
+package runners.api_testrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,10 +15,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@dr_login_appointments"
-
-
+        tags = "@US07_TC001"
 )
-public class US11_UI_Runner {
-
+public class Saban_API_TestRunner {
 }

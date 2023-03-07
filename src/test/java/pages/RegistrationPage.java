@@ -12,6 +12,9 @@ public class RegistrationPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(id = "account-menu")
+    public WebElement account_menu;
+
     @FindBy(xpath = "//a[@href='/account/register']")  //a[contains(@href,'/account/register')]
     public WebElement linkRegister;
 
@@ -40,6 +43,11 @@ public class RegistrationPage {
     @FindBy(id = "register-submit")
     public WebElement btnRegisterSubmit;
 
+    @FindBy(xpath = "//div[contains(text(),'Registration Saved')]")
+    public WebElement registrationSaved;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement invalidSSNmessage;
 
     @FindBy(xpath = "//input[@id='firstPassword']")
     public WebElement newPasswordBox;
@@ -79,6 +87,7 @@ public class RegistrationPage {
 
     @FindBy(xpath = "//*[.='Registration Saved']")
     public WebElement savedMessage;
+
 
 
 

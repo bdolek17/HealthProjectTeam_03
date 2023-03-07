@@ -1,4 +1,4 @@
-package runners.uitestunner;
+package runners.db_testrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,10 +15,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@registration"
-
+        tags = "@US10_TC009_DB_patient_update_verification_by_ssn"
 
 )
-public class US01_UI_Runner {
-
+public class Saban_DB_TestRunner {
 }
