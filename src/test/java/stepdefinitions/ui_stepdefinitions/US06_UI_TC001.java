@@ -5,8 +5,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.HomePage;
-import pages.MakeAppointmentPage;
 import utilities.Driver;
 import utilities.JSUtils;
 import utilities.ReusableMethods;

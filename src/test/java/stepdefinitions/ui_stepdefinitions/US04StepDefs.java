@@ -2,7 +2,6 @@ package stepdefinitions.ui_stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import pages.MakeAppointmentPage;
 import pages.PatientsPage;
 import utilities.Driver;
 
