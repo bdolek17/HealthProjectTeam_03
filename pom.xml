@@ -73,6 +73,8 @@
             <version>1.0.2</version>
         </dependency>
 
+
+
         <!-- DATABASE -->
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
@@ -112,6 +114,7 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+
 
     </dependencies>
 

@@ -93,13 +93,6 @@ public class definitions {
     @Then("patientt should see username and password come automatically to log in to the system again")
     public void patienttShouldSeeUsernameAndPasswordComeAutomaticallyToLogInToTheSystemAgain() {
 
-        //   Assert.assertEquals("patient.t03",loginPage.inputUsername.gettext());
-
-        // assertFalse("patient.t03", loginPage.inputUsername.getAttribute("patient.t03"));
-
-        //  assertEquals("patient.t03", loginPage.inputUsername.getAttribute("value"));
-        //assertFalse("The value of the username input box did not come automatically.", "patient.t03", loginPage.inputUsername.getAttribute("value"));
-
 
         assertNotEquals("The value of the username input box did not come automatically.", "patient.t03", loginPage.inputUsername.getAttribute("value"));
         ReusableMethods.waitFor(1);
