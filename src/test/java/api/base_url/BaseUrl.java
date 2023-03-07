@@ -10,7 +10,7 @@ public class BaseUrl {
     @Before
     public void setUp() {
         spec = new RequestSpecBuilder().
-                setBaseUri("https://medunna.com/api/").
+                setBaseUri("https://medunna.com/").
                 build();
     }
 }
