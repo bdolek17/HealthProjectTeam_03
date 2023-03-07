@@ -2,13 +2,11 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import pages.LoginPage;
 import pages.MakeAppointmentPage;
-import pages.PatientViewPage;
 import pages.PatientsPage;
 import utilities.Driver;
 
-public class MakeAnAppointmentStepDefs {
+public class US04StepDefs {
 
    MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage();
    PatientsPage patientsPage = new PatientsPage();

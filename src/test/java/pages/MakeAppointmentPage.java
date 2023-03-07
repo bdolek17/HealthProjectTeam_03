@@ -19,6 +19,9 @@ public class MakeAppointmentPage {
     @FindBy(xpath = "//span[.='Send an Appointment Request']")
     public WebElement appRequest;
 
+    @FindBy(xpath ="//span[.='Appointment registration saved!'")
+    public WebElement appSaved;
+
 
 
 
