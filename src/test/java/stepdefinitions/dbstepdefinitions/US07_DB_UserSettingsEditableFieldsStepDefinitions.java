@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.dbstepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
