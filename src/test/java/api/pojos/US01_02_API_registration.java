@@ -1,7 +1,12 @@
 package api.pojos;
 
-public class US01_API_registration {
-    private boolean activated;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+import java.util.Arrays;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class US01_02_API_registration {
+    private Boolean activated;
     private String createdBy;
     private String createdDate;
     private String email;
@@ -15,13 +20,14 @@ public class US01_API_registration {
     private String login;
     private String password;
     private String ssn;
+    private String [] authorities;
 
-    public US01_API_registration() {
+    public US01_02_API_registration() {
     }
 
-    public US01_API_registration(boolean activated, String createdBy, String createdDate, String email, String firstName,
-                                 int id, String imageUrl, String langKey, String lastModifiedBy, String lastModifiedDate,
-                                 String lastName, String login, String password, String ssn) {
+    public US01_02_API_registration(Boolean activated, String createdBy, String createdDate, String email, String firstName,
+                                    int id, String imageUrl, String langKey, String lastModifiedBy, String lastModifiedDate, String lastName,
+                                    String login, String password, String ssn, String[] authorities) {
         this.activated = activated;
         this.createdBy = createdBy;
         this.createdDate = createdDate;
@@ -36,6 +42,7 @@ public class US01_API_registration {
         this.login = login;
         this.password = password;
         this.ssn = ssn;
+        this.authorities = authorities;
     }
 
     public boolean isActivated() {
@@ -150,9 +157,25 @@ public class US01_API_registration {
         this.ssn = ssn;
     }
 
+    public Boolean getActivated() {
+        return activated;
+    }
+
+    public void setActivated(Boolean activated) {
+        this.activated = activated;
+    }
+
+    public String[] getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(String[] authorities) {
+        this.authorities = authorities;
+    }
+
     @Override
     public String toString() {
-        return "US01_API_registration{" +
+        return "US01_02_API_registration{" +
                 "activated=" + activated +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdDate='" + createdDate + '\'' +
@@ -167,6 +190,7 @@ public class US01_API_registration {
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", ssn='" + ssn + '\'' +
+                ", authorities=" + Arrays.toString(authorities) +
                 '}';
     }
 }

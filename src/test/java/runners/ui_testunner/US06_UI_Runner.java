@@ -1,4 +1,4 @@
-package runners.api_testrunner;
+package runners.uitestunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,12 +15,11 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-<<<<<<< HEAD:src/test/java/runners/apitestrunner/ApiTestRunner.java
-        tags = "@Api_US01"
-=======
-        tags = "@TC03_Api"
->>>>>>> main:src/test/java/runners/api_testrunner/ApiTestRunner.java
+        tags = "@US06_UI"
+
 
 )
-public class ApiTestRunner {
+
+
+public class US06_UI_Runner {
 }
