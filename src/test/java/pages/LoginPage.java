@@ -25,6 +25,29 @@ public class LoginPage {
 
     @FindBy(xpath = "(//*[@id='login-page']//button)[3]")
     public WebElement btnSignin;
+
+
+
+    @FindBy(xpath = "//span[.='patient-updated Hasta-updated']")
+    public WebElement btnPatient;
+
+    @FindBy(xpath = "//span[.='Sign out']")
+    public WebElement linkSignout;
+
+  @FindBy(xpath = "//*[@id='login-page']")
+   public WebElement linkNewregister;
+
+
+   // @FindBy(xpath = "//span[.='Register a new account']")
+   // public WebElement linkNewregister;
+
+   // @FindBy(xpath = "//span[.='Cancel']")
+  // public WebElement getBtnCancel;
+
+   // @FindBy(xpath = "(//*[@id='login-page']//button)[1]")
+    //public WebElement getBtnCancel;
+//*[@id="login-page"]/div/form/div[3]/button[1]
+// Register a new account
 }
 
 
