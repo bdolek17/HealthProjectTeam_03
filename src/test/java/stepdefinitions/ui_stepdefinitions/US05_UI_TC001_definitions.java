@@ -1,19 +1,17 @@
-package stepdefinitions.US05_TC_01;
+package stepdefinitions.ui_stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.JSUtils;
 import utilities.ReusableMethods;
 
 import static org.junit.Assert.*;
 
-public class definitions {
+public class US05_UI_TC001_definitions {
 
     HomePage homepage = new HomePage();
     LoginPage loginPage = new LoginPage();
