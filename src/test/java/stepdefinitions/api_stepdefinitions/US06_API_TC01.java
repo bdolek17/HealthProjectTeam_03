@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.api_stepdefinitions;
 
 import api.pojos.US06_API_appointment;
 import io.cucumber.java.en.Given;
