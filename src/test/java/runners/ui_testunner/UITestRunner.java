@@ -1,4 +1,4 @@
-package runners.uitestunner;
+package runners.ui_testunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -19,6 +19,8 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks"},
         dryRun = true,
         tags = "@TC03_Api"
+
+//        tags = "@FirstNameUpdateTest"
 
 
 )

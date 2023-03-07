@@ -1,7 +1,7 @@
 @login_patient
   Feature:
      Scenario: Login_Patient
-       Given user is on "https://medunna.com/" page
+       Given user iss on "https://medunna.com/" page
        When user clicks on the account menu icon on home page
        And user clicks on the sign in link on login page
        And user enters the username "elifkaya" on login page

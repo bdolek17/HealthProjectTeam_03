@@ -1,4 +1,4 @@
-package runners.apitestrunner;
+package runners.db_testrunner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@TC03_Api"
+        tags = "@user_registration"
 
 )
-public class ApiTestRunner {
+public class DBTestRunner {
 }
