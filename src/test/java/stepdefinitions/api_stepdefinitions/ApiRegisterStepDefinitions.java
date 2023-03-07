@@ -1,6 +1,5 @@
-package stepdefinitions.apistepdefinitions;
+package stepdefinitions.api_stepdefinitions;
 
-import com.github.javafaker.Faker;
 import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 

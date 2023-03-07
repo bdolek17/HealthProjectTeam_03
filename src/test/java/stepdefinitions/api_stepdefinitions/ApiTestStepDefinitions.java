@@ -1,4 +1,4 @@
-package stepdefinitions.apistepdefinitions;
+package stepdefinitions.api_stepdefinitions;
 
 import api.pojos.Account;
 import com.github.javafaker.Faker;
