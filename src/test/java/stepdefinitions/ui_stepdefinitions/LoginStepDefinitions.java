@@ -17,6 +17,17 @@ public class LoginStepDefinitions {
         homePage.accountMenu.click();
         Driver.wait(1);
     }
+
+
+
+    @When("user clicks on the sign in link on login page")
+    public void user_clicks_on_the_sign_in_link_on_login_page() {
+        try{
+            homePage.linkLogin.click();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+
     @When("user clicks on the sign in link on home page")
     public void user_clicks_on_the_sign_in_link_on_home_page() {
         homePage.linkLogin.click();
@@ -28,9 +39,13 @@ public class LoginStepDefinitions {
         Driver.wait(1);
     }
     @When("user enters the password {string} on login page")
+
+    public void user_enters_the_password_on_login_page(String pwd) { loginPage.inputPassword.sendKeys(pwd);
+
     public void user_enters_the_password_on_login_page(String pwd) {
         Driver.waitAndSendText(loginPage.inputPassword,pwd);
         Driver.wait(1);
+
     }
     @When("user clicks on sign in button on login page")
     public void user_clicks_on_sign_in_button_on_login_page() {

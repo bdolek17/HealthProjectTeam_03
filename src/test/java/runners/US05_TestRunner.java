@@ -1,4 +1,4 @@
-package runners.ui_testunner;
+package runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,16 +15,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
+        tags = "@patient_login_" )
 
-        tags = "@FirstNameUpdateTest"
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-)
-public class UITestRunner {
-
+public class US05_TestRunner {
 }
