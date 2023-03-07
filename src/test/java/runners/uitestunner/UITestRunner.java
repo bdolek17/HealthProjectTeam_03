@@ -9,13 +9,16 @@ import org.junit.runner.RunWith;
         plugin = {
                 "pretty",
                 "html:target/default-cucumber-reports.html",
-                "rerun:target/failedRerun.txt"
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome=true,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = false,
-        tags = "@login_patient"
+        dryRun = true,
+        tags = "@TC03_Api"
 
 
 )
