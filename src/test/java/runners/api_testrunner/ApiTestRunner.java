@@ -15,7 +15,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@TC03_Api"
+        tags = "@Api_US01"
+
 
 )
 public class ApiTestRunner {

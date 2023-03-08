@@ -1,4 +1,4 @@
-package pojos;
+package api.pojos;
 
 public class Appointment {
 

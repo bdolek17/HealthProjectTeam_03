@@ -15,10 +15,13 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@US_20_UpdateStaff"
+        tags = "@registration_user_email"
+        //tags = "@registration_username_negative"
+        //tags = "@registration_email_negative"
+        //tags = "@Registration_US02"
 
 
 )
-public class US11_UI_Runner {
 
+public class US02_Runner {
 }
