@@ -8,6 +8,8 @@ import utilities.Driver;
 import utilities.JSUtils;
 
 public class LoginStepDefinitions {
+
+}
     HomePage homePage=new HomePage();
     LoginPage loginPage=new LoginPage();
 
@@ -58,4 +60,6 @@ public class LoginStepDefinitions {
         Assert.assertTrue(userName.length()>0);
         Driver.wait(2);
     }
-}
+
+
+

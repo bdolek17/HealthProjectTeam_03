@@ -15,11 +15,11 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-<<<<<<< HEAD:src/test/java/runners/apitestrunner/ApiTestRunner.java
+
         tags = "@Api_US01"
-=======
-        tags = "@TC03_Api"
->>>>>>> main:src/test/java/runners/api_testrunner/ApiTestRunner.java
+
+        //tags = "@TC03_Api"
+
 
 )
 public class ApiTestRunner {
