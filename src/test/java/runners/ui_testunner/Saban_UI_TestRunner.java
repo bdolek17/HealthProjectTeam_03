@@ -37,7 +37,12 @@ import org.junit.runner.RunWith;
 //        tags = "@US10_TC009_DB_patient_update_verification_by_ssn"
 //        tags = "@US10_TC010_ResetPatientUpdates
 // --------------------------------------------------
-        tags = "@ApiUserRegister"
+//        tags = "@ApiUserRegister"
+        //tags = "@US16_TC01"
+        //tags = "@US16_TC02"
+        tags = "@US16_PatientCreationAutherization"
+
+
 
 )
 public class Saban_UI_TestRunner {
