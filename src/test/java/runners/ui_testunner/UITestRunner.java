@@ -22,10 +22,7 @@ import org.junit.runner.RunWith;
 
 //        tags = "@FirstNameUpdateTest"
 
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 )
 public class UITestRunner {
 
