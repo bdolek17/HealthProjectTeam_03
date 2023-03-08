@@ -51,8 +51,41 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(@href,'ps-in-patient') and @role='menuitem']")  //S.A.
     public WebElement linkInPatient;
 
+    @FindBy(xpath = "//li[@id='admin-menu']/a")  //S.A.
+    public WebElement adminMenuAdministration;
 
+    @FindBy(xpath = "//a[contains(@href,'user-management')]")  //S.A.
+    public WebElement adminMenuUserManagement;
 
+    @FindBy(xpath = "//li[@id='entity-menu']/a")  //S.A.
+    public WebElement adminMenuItemsAndTitles;
+
+    @FindBy(xpath = "//a[contains(@href,'/patient')]")  //S.A.
+    public WebElement adminMenuPatient;
+
+    @FindBy(xpath = "//a[contains(@href,'/staff')]")  //S.A.
+    public WebElement adminMenuStaff;
+
+    @FindBy(xpath = "//a[contains(@href,'/physician')]")  //S.A.
+    public WebElement adminMenuPhysician;
+
+    @FindBy(xpath = "//a[contains(@href,'/appointment')]")  //S.A.
+    public WebElement adminMenuAppointment;
+
+    @FindBy(xpath = "//a[contains(@href,'/c-test-item')]")  //S.A.
+    public WebElement adminMenuCTestItem;
+
+    @FindBy(xpath = "//a[contains(@href,'/room')]")  //S.A.
+    public WebElement adminMenuRoom;
+
+    @FindBy(xpath = "//a[contains(@href,'/country')]")  //S.A.
+    public WebElement adminMenuCountry;
+
+    @FindBy(xpath = "//a[contains(@href,'/c-state')]")  //S.A.
+    public WebElement adminMenuCState;
+
+    @FindBy(xpath = "//a[contains(@href,'/c-message')]")  //S.A.
+    public WebElement adminMenuCMessage;
 
 }
 
