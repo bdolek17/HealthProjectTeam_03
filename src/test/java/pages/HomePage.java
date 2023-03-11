@@ -87,5 +87,7 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(@href,'/c-message')]")  //S.A.
     public WebElement adminMenuCMessage;
 
+
+
 }
 
