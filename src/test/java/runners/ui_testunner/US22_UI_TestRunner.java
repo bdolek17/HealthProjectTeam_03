@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@patient_login_" )
+        tags = "@TC001_Staff_appointment" )
 
-public class US05_TestRunner {
+public class US22_UI_TestRunner {
 }
