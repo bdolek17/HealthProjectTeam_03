@@ -15,10 +15,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@US_20_UpdateStaff"
-
+        tags = "@US18_testItems"
 
 )
-public class US11_UI_Runner {
-
+public class US18_UI_Runner {
 }

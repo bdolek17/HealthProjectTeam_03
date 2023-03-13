@@ -18,7 +18,6 @@ public class HomePage {
     @FindBy(id = "account-menu")
     public WebElement account_menu  ;
 
-
     @FindBy(id = "login-item")  //a[contains(@href,'login')]
     public WebElement linkLogin;
 
@@ -87,6 +86,11 @@ public class HomePage {
 
     @FindBy(xpath = "//a[contains(@href,'/c-message')]")  //S.A.
     public WebElement adminMenuCMessage;
+
+    @FindBy(xpath = "//*[@id=\"header-tabs\"]/li[6]/a")
+    public WebElement contactButton;
+
+
 
 }
 
