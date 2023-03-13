@@ -57,7 +57,6 @@ public class US05_UI_TC001_definitions {
     public void patientt_clicks_on_sign_in_button_on_login_page() {
         loginPage.btnSignin.click();
 
-        // Driver.getDriver().get("https://medunna.com/");
 
     }
 
