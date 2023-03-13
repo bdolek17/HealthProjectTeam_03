@@ -15,6 +15,14 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
+        //tags = "@US16_TC01"
+        //tags = "@US16_TC02"
+        //tags = "@US16_PatientCreationAutherization"
+        //tags = "@DeleteCreatedPatients"
+        tags = "@US16_TC10"
+
+//        ------------------------------------------------------
+//        ------------------------------------------------------
 //        tags = "@US07_TC001"
 //        tags = "@US07_TC002"
 //        tags = "@US07_TC003_API_firstname_verification"
@@ -38,9 +46,7 @@ import org.junit.runner.RunWith;
 //        tags = "@US10_TC010_ResetPatientUpdates
 // --------------------------------------------------
 //        tags = "@ApiUserRegister"
-        //tags = "@US16_TC01"
-        //tags = "@US16_TC02"
-        tags = "@US16_PatientCreationAutherization"
+
 
 
 

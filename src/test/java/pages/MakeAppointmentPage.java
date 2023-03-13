@@ -23,6 +23,9 @@ public class MakeAppointmentPage {
 
 
 
+
+
+
     @FindBy(xpath = "//input[@name='firstName']")
     public WebElement firstNameInput;
 
@@ -59,8 +62,13 @@ public class MakeAppointmentPage {
 
 
 
+
     //@FindBy(xpath ="//span[.='Appointment registration saved!'")
    // public WebElement appSaved;
+
+
+
+
 
 
 
