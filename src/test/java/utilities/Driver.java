@@ -32,7 +32,12 @@ public class Driver {
             String browser = ConfigReader.getProperty("browser");
             if ("chrome".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                //ChromeOptions is used to remove "Chrome is being controlled by automated test software" notification
+                ChromeOptions options = new ChromeOptions();
+                //options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});  //remove Chrome is being control by auto test ....
+                options.setExperimentalOption("detach", true); //prevent auto closing when test finishes
+                options.addArguments("--remote-allow-origins=*");
+                driver = new ChromeDriver(options);
             } else if ("firefox".equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();

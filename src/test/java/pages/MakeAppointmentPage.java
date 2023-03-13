@@ -51,6 +51,7 @@ public class MakeAppointmentPage {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -59,4 +60,6 @@ public class MakeAppointmentPage {
 
 
 
+=======
+>>>>>>> main
 }
