@@ -43,7 +43,7 @@ public class WebTableStepDefinitions {
 
         }
 
-        Map<String, Map<String,WebElement>> patientData=patientWebTableData.getPatientData();
+        Map<String, Map<String,WebElement>> patientData=patientWebTableData.getWebTableData();
         System.out.println(patientData);
 
 

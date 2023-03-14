@@ -44,8 +44,8 @@ public class LoginStepDefinitions {
         Assert.assertTrue(userName.length()>0);
         Driver.wait(2);
     }
-    @When("user logs in as admin with the username as {string} and password as {string} to web app")
-    public void user_logs_in_as_admin_with_the_username_as_and_password_as_to_web_app(String userName, String userPwd) {
+    @When("user logs in with the username as {string} and password as {string} to web app")
+    public void user_logs_in_with_the_username_as_and_password_as_to_web_app(String userName, String userPwd) {
         homePage.accountMenu.click();//Driver.wait(1);
         homePage.linkLogin.click();//Driver.wait(1);
         Driver.waitAndSendText(loginPage.inputUsername,userName);//Driver.wait(1);

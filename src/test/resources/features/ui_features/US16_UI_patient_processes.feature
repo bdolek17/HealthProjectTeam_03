@@ -68,7 +68,7 @@ Feature: (Create or Edit Patient by just Admin, Validate with API)
   @US16_TC04
   Scenario: US16_TC04 When CREATING a patient, admin user should have following field (First Name, Last Name, Birth Date, Phone, Gender, Blood Group, Address, Description, Created Date, User, Country and state / City)
     Given user is on medunna home page
-    When user logs in as admin with the username as "AdminTeam03" and password as "Team03+" to web app
+    When user logs in with the username as "AdminTeam03" and password as "Team03+" to web app
     And user click on ItemsAndTitles menu
     And user click on admin patient menu
     And user click on Create a new patient button
@@ -78,7 +78,7 @@ Feature: (Create or Edit Patient by just Admin, Validate with API)
   @US16_TC05
   Scenario: US16_TC05 When EDITING a patient, admin user should have following field (First Name, Last Name, Birth Date, Phone, Gender, Blood Group, Address, Description, Created Date, User, Country and state / City)
     Given user is on medunna home page
-    When user logs in as admin with the username as "AdminTeam03" and password as "Team03+" to web app
+    When user logs in with the username as "AdminTeam03" and password as "Team03+" to web app
     And user click on ItemsAndTitles menu
     And user click on admin patient menu
     And user clicks first patient edit button on the page
@@ -88,7 +88,7 @@ Feature: (Create or Edit Patient by just Admin, Validate with API)
   @US16_TC06
   Scenario: US16_TC06 Admin should be able to create new patient
     Given user is on medunna home page
-    When user logs in as admin with the username as "AdminTeam03" and password as "Team03+" to web app
+    When user logs in with the username as "AdminTeam03" and password as "Team03+" to web app
     And user click on ItemsAndTitles menu
     And user click on admin patient menu
     And user click on Create a new patient button
@@ -119,7 +119,7 @@ Feature: (Create or Edit Patient by just Admin, Validate with API)
   @US16_TC09
   Scenario: US16_TC07 Admin should not be able to create new patient without state value
     Given user is on medunna home page
-    When user logs in as admin with the username as "AdminTeam03" and password as "Team03+" to web app
+    When user logs in with the username as "AdminTeam03" and password as "Team03+" to web app
     And user click on ItemsAndTitles menu
     And user click on admin patient menu
     And user click on Create a new patient button
@@ -132,7 +132,7 @@ Feature: (Create or Edit Patient by just Admin, Validate with API)
   @US16_TC10
   Scenario: US16_TC08 Admin can be able to delete any patient
     Given user is on medunna home page
-    When user logs in as admin with the username as "AdminTeam03" and password as "Team03+" to web app
+    When user logs in with the username as "AdminTeam03" and password as "Team03+" to web app
     And user click on ItemsAndTitles menu
     And user click on admin patient menu
     And user clicks patient delete button with id 1254

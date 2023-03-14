@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         //tags = "@US16_TC02"
         //tags = "@US16_PatientCreationAutherization"
         //tags = "@DeleteCreatedPatients"
-        tags = "@US16_TC10"
+        tags = "@US23_TC06_DB"
 
 //        ------------------------------------------------------
 //        ------------------------------------------------------

@@ -218,7 +218,7 @@ public class US16_UI_PatientCreationAutherization {
         Boolean keepReadingIfNotExistsInCurrentPage=true;
         while(keepReadingIfNotExistsInCurrentPage){
             patientsListWebTable.loadCurrentPage(Driver.getDriver().findElements(locatorTableBody)); //load current page
-            Map<String, Map<String,WebElement>> patientData=patientsListWebTable.getPatientData();   //get list loaded until now
+            Map<String, Map<String,WebElement>> patientData=patientsListWebTable.getWebTableData();   //get list loaded until now
 
             if(patientData.containsKey(tobeDeletePatientId)) {
                 foundPatientDataRow=patientData.get(tobeDeletePatientId);

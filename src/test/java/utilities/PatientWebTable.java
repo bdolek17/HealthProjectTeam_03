@@ -24,10 +24,10 @@ public class PatientWebTable {
     private int rowsCount=0;
     private List<WebElement> rowColumns;
 
-    private Map<String,Map<String,WebElement>> patientData=new HashMap<>();  //Map<patientID,Map<ColumnName,WebElement>>
+    private Map<String,Map<String,WebElement>> webTableData=new HashMap<>();  //Map<patientID,Map<ColumnName,WebElement>>
 
-    public Map<String, Map<String, WebElement>> getPatientData() {
-        return patientData;
+    public Map<String, Map<String, WebElement>> getWebTableData() {
+        return webTableData;
     }
 
     public PatientWebTable(By locatorTHeadRows, By locatorTBodyRows) {
@@ -59,7 +59,7 @@ public class PatientWebTable {
                 tableData.put(headerRowTexts.get(colIndex),col);
                 colIndex++;
             }
-            patientData.put(rowColumns.get(0).getText(),tableData);
+            webTableData.put(rowColumns.get(0).getText(),tableData);
         }
     }
 
