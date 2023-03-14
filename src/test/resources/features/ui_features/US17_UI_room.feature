@@ -1,5 +1,5 @@
 
-@US17_UI
+@US17_UI_Create
 Feature: Room
 
   Scenario: Room_Create
@@ -40,29 +40,33 @@ Feature: Room
     #And  Admin Click on account menu
     #Then  Admin Click Sign out
 
-  #Scenario: TC_02_The admin should view all rooms, update existing rooms and delete rooms
 
-   # And  Admin Click on Edit and update rooms
-    #And  Admin Click on Room Number box, delete information and enter room number
-    #And  Admin Click on Room Type box and change room type
-    #And  Admin Click on Status
-    #And  Admin Click on Price box, delete information and enter price
-    #And  Admin Click on Description box,delete information and enter description
-    #And  Admin Click on Save button
-    #And  Admin Verify that updated successfully
-    #And  Admin Click on account menu
-    #Then  Admin Click Sign out
+  @US17_Delete
+  Scenario: TC_02_The admin should view all rooms, update existing rooms and delete rooms
+
+    Given  ML Admin Navigate to url "https://medunna.com/" page
+    And  ML Admin Click on account icon page
+    Then  ML Admin Click on Sign in page
+    And  ML Admin Click on "AdminTeam03" input box and enter valid Username page
+    And  ML Admin Click on "Team03+"  input box and enter valid Password page
+    And  ML Admin Click on Sign in button page
+    And  ML Admin Click on Items&Titles page
+    And  ML Admin Select Room from drop down menu and click page
+    And  Admin Click on Edit and update rooms
+    And  Admin Click on Room Number box, delete information and enter room number
+    And  Admin Click on Room Type box and change room type
+    And  Admin Click on Status
+    And  Admin Click on Price box, delete information and enter price
+    And  Admin Click on Description box,delete information and enter description
+    And  Admin Click on Save button
+    And  Admin Verify that updated successfully
+    And  Admin Click on Delete
+    And  Admin Click on Delete in alert window
+    And  Admin Verify that deleted successfully
+    And  Admin Click on account menu
+    Then  Admin Click Sign out
 
 
-  #Scenario: TC_02_The admin should view all rooms, update existing rooms and delete rooms
-
-   # And  Admin Click on Delete
-   # And  Admin Click on Delete in alert window
-   # And  Admin Verify that deleted successfully
-   # And  Admin Click on account menu
-   # Then  Admin Click Sign out
-
-  #Scenario: TC_03_The admin should not create new rooms with blank "Price" box
 
 
 

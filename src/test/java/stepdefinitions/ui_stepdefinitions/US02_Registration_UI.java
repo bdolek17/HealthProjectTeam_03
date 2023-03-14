@@ -49,9 +49,8 @@ public class US02_Registration_UI {
     }
     @When("enter {string} in FirstName input")
     public void enter_in_first_name_input(String FirstName) {
-        FirstName = faker.name().firstName();
 
-        registrationPage.inputFirstName.sendKeys(FirstName);
+
 
     }
     @When("enter {string} in LastName input")

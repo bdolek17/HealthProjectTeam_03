@@ -1,6 +1,5 @@
 package runners.ui_testunner;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -16,10 +15,9 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@US17_UI_Create"
-        //tags = "@US17_Delete"
+        tags = "@US26_UI"
+
 )
-public class US17_UI_Runner {
 
-
+public class US26_UI_Runner {
 }

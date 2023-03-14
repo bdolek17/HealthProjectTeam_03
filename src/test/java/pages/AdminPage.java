@@ -99,8 +99,14 @@ public class AdminPage {
     @FindBy(xpath = "//button[@id='save-entity']")
     public WebElement roomSaveButton;
 
-    @FindBy(xpath = "//*[text()='A new Room is created']")
-    public WebElement alertRoomIsCreated;
+    //@FindBy(xpath = "//*[text()='A new Room is created']")
+    //public WebElement alertRoomIsCreated;
+
+    @FindBy(xpath =  "//*[contains(text(),'A new Room is created with identifier')]")
+            public WebElement alertRoomIsCreated;
+
+    @FindBy(xpath = "//*[contains(text(), 'A Room is update with identifier')]")
+    public WebElement alertRoomIsUpdate;
 
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement adminAccountButton;
@@ -115,6 +121,12 @@ public class AdminPage {
     @FindBy(xpath = "//span[text()='TWIN']")
     public WebElement twinType;
 
+    @FindBy(xpath = "//span[text()='View']")
+    public WebElement viewButton;
+
+    @FindBy(xpath = "//dl[@class='jh-entity-details']")
+    public WebElement visibleRoomInfo;
+
     @FindBy(xpath = "//span[text()='Edit']")
     public WebElement editButton;
 
@@ -123,6 +135,12 @@ public class AdminPage {
 
     @FindBy(xpath = "(//button[@type='button'])[4]")
     public WebElement deletButtonAlertRoom;
+
+    @FindBy(xpath = "//*[contains(text(), 'Are you sure you want to delete Room')]")
+    public WebElement deleteQuestionAlert;
+
+    @FindBy(xpath = "//*[contains(text(), 'A Room is delete with identifier']")
+    public WebElement alertDeleteRoom;
 
     @FindBy(xpath = "//button[@class='close']")
     public WebElement closeButtonRoom;
