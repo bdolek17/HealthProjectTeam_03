@@ -1,5 +1,4 @@
 package runners.ui_testunner;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -15,7 +14,8 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@patient_login_" )
+        tags = "@contact"
 
-public class US05_TestRunner {
+)
+public class US27_UI_Runner {
 }
