@@ -1,6 +1,7 @@
 
-@US17_UI_Create
+@US17_UI_Room
 Feature: Room
+  @US17_UI_Create
 
   Scenario: Room_Create
     Given  ML Admin Navigate to url "https://medunna.com/"

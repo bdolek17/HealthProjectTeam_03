@@ -55,8 +55,8 @@ public class US26_UI_PatientAppointmentStepDef {
     }
     @When("ML patient clicks my pages select make an appointment")
     public void ml_patient_clicks_my_pages_select_make_an_appointment() {
-        JSUtils.clickElementByJS(patientAppointmentPage.myPagePatient);
-        ReusableMethods.waitFor(1);
+        //JSUtils.clickElementByJS(patientAppointmentPage.myPagePatient);
+
         JSUtils.clickElementByJS(patientAppointmentPage.makeAnAppointment);
 
 
@@ -89,7 +89,7 @@ public class US26_UI_PatientAppointmentStepDef {
     }
     @And("ML patient enter phone {string}")
     public void mlPatientEnterPhone(String phone) {
-        phone = faker.phoneNumber().cellPhone();
+        //phone = faker.phoneNumber().cellPhone();
         patientAppointmentPage.phoneBox.sendKeys(phone);
 
     }

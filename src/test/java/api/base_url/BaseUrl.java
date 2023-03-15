@@ -5,7 +5,8 @@ import org.junit.Before;
 
 public class BaseUrl {
 
-    protected RequestSpecification spec;
+    //protected RequestSpecification spec;
+    public static RequestSpecification spec;
 
     @Before
     public void setUp() {

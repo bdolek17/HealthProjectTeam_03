@@ -1,5 +1,6 @@
 package stepdefinitions.ui_stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,7 +23,8 @@ public class US17_UI_Room {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     AdminPage adminPage = new AdminPage();
-    //Faker faker = new Faker();
+    Faker faker = new Faker();
+    private int number;
 
     @Given("ML Admin Navigate to url {string}")
     public void adminNavigateToUrl(String url) {
@@ -85,7 +87,9 @@ public class US17_UI_Room {
     @Then("ML Admin Click on Room Number box and enter room number")
     public void click_on_room_number_box_and_enter_room_number() {
         //adminPage.createOrEditRoomText.isDisplayed();
-        adminPage.roomNumberBox.sendKeys("8574");
+        //number = faker.number().randomDigit();
+
+        adminPage.roomNumberBox.sendKeys("200499");
 
     }
 
