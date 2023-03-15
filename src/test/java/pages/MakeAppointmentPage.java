@@ -51,7 +51,7 @@ public class MakeAppointmentPage {
 
 
 
-<<<<<<< HEAD
+
 
 
 
@@ -59,7 +59,4 @@ public class MakeAppointmentPage {
    // public WebElement appSaved;
 
 
-
-=======
->>>>>>> main
 }

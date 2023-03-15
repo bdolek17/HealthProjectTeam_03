@@ -26,11 +26,11 @@ public class US20_API_Staff_Creation {
 
             response.prettyPrint();
 
-        US20_API_StaffCreation us20_api_staffCreation=new US20_API_StaffCreation();
-        us20_api_staffCreation.setFirstName("Patricia");
-        us20_api_staffCreation.setLastName("Cekrezi");
-        us20_api_staffCreation.setPhone(416557678);
-        us20_api_staffCreation.setSsn("455-66-9874");
+        US20_API_StaffCreation expectedBody=new US20_API_StaffCreation();
+        expectedBody.setFirstName("Patricia");
+        expectedBody.setLastName("Cekrezi");
+        expectedBody.setPhone(416557678);
+        expectedBody.setSsn("455-66-9874");
 
 
         US20_API_UserPojo us20_api_userPojo=new US20_API_UserPojo();
