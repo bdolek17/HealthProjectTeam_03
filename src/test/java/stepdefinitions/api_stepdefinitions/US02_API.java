@@ -11,12 +11,14 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Assert;
+import utilities.AuthenticationMedunna;
 import utilities.ConfigReader;
 
 import java.io.IOException;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static utilities.ApiUtilities.specMedunna;
@@ -28,9 +30,21 @@ public class US02_API {
 
     Faker faker = new Faker();
     Response response;
-    US02_API_Register[] us02_api_registers;
+    US02_API_Register us02_api_register = new US02_API_Register();
+   // US02_API_Register[] us02_api_registers;
     @Given("user sets the necessary path params params {string}")
-    public void userSetsTheNecessaryPathParamsParams(String arg0) {
+    public void userSetsTheNecessaryPathParamsParams(String url) {
+        //US02_API_Register us02_api_register = new US02_API_Register();
+
+        response = given().
+                headers("Authorization", "Bearer "+ AuthenticationMedunna.generateToken(),
+                        "Content-Type", ContentType.JSON,
+                        "Accept", ContentType.JSON).
+
+
+                body(us02_api_register).
+                post(url);
+        response.prettyPrint();
 
        //specMedunna.pathParams("first", "api", "second", "register");
 
@@ -62,28 +76,24 @@ public class US02_API {
     }
     @Given("user sends the POST request and gets the response body")
     public void user_sends_the_post_request_and_gets_the_response_body() {
-        response = given().headers(
-                "Authorization",
-                "Bearer " + generateToken(),
-                "Content-Type", ContentType.JSON,
-                "Accept", ContentType.JSON
-        ).when().post(ConfigReader.getProperty("urlRegister"));
+        Assert.assertEquals(201,response.getStatusCode());
 
-        response.prettyPrint();
 
     }
     @When("user saves the api records to correspondent files")
     public void user_saves_the_api_records_to_correspondent_files() {
-       saveRegisterData(us02_api_registers);
+       //saveRegisterData(us02_api_register);
 
     }
     @Then("user validates api records data")
     public void user_validates_api_records_data() throws IOException {
 
         US02_API_Register us02_api_register = new US02_API_Register();
-       //response.then().statusCode(201);
-      // response.prettyPrint();
-
+    response.then().assertThat().body("firstname", equalTo(faker)).
+            body("lastname", equalTo(faker)).
+            body("ssn", equalTo(faker)).
+            body("email", equalTo(faker)).
+            body("username", equalTo(faker)).body("password", equalTo(faker));
 
 
         //ObjectMapper obj = new ObjectMapper();

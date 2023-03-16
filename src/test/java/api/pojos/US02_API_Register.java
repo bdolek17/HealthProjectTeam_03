@@ -10,6 +10,7 @@ import java.util.Arrays;
 public class US02_API_Register {
 
 
+
     private String firstName;
     private String lastName;
     private String ssn;
@@ -20,6 +21,7 @@ public class US02_API_Register {
     private int id;
     private boolean activated;
     private String[] authorities;
+
 
     public US02_API_Register(String firstName, String lastName, String ssn, String login, String langKey, String password, String email, int id, boolean activated, String[] authorities) {
         this.firstName = firstName;
