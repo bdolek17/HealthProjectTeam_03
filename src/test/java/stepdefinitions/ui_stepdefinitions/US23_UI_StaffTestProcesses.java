@@ -4,8 +4,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import pages.CreateOrEditTestResultPage;
 import pages.SearchPatientPage;
+import pages.TestResultsPage;
 import utilities.Driver;
 import utilities.PatientWebTable;
 
@@ -14,6 +17,8 @@ import java.util.Map;
 public class US23_UI_StaffTestProcesses {
 
     SearchPatientPage searchPatient=new SearchPatientPage();
+    CreateOrEditTestResultPage testResultCreateOrEditPage=new CreateOrEditTestResultPage();
+    TestResultsPage testResults=new TestResultsPage();
 
     By locatorTableHeader=By.xpath("//table//thead//tr");
     By locatorTableBody=By.xpath("//table//tbody//tr");
@@ -46,9 +51,21 @@ public class US23_UI_StaffTestProcesses {
         }
     }
 
-    @When("Verify that patient has been found with patient id {string}")
-    public void verify_that_patient_has_been_found_with_patient_id(String patientId) {
-
+//    @When("Verify that patient has been found with patient id {string}")
+//    public void verify_that_patient_has_been_found_with_patient_id(String patientId) {
+//
+//        patientsListWebTable=new PatientWebTable(locatorTableHeader,locatorTableBody);
+//
+//        patientsListWebTable.loadCurrentPage(Driver.getDriver().findElements(locatorTableBody)); //load current page
+//        Map<String, Map<String,WebElement>> patientDataRows=patientsListWebTable.getWebTableData();   //get all rows (normally only one)  //Map<patientid, Map<columnname,columnnCell>>
+//
+//        foundPatientDataRow=patientDataRows.get(patientId);
+//
+//        Assert.assertTrue(foundPatientDataRow!=null);
+//
+//    }
+    @When("user clicks on Show Appointments button of patient with patient id {string}")
+    public void user_clicks_on_show_appointments_button_of_patient_with_patient_id(String patientId) {
         patientsListWebTable=new PatientWebTable(locatorTableHeader,locatorTableBody);
 
         patientsListWebTable.loadCurrentPage(Driver.getDriver().findElements(locatorTableBody)); //load current page
@@ -56,11 +73,6 @@ public class US23_UI_StaffTestProcesses {
 
         foundPatientDataRow=patientDataRows.get(patientId);
 
-        Assert.assertTrue(foundPatientDataRow!=null);
-
-    }
-    @When("user clicks on Show Appointments button")
-    public void user_clicks_on_show_appointments_button() {
         WebElement buttonsColumn=foundPatientDataRow.get("buttons");
         Driver.wait(1);
         WebElement showAppointmentsButton=buttonsColumn.findElements(By.tagName("a")).get(2);
@@ -110,4 +122,63 @@ public class US23_UI_StaffTestProcesses {
         Assert.assertTrue(testResultsDataRows.size()>0);
 
     }
+
+    @When("user clicks on Edit button of Test Results Item with id {string}")
+    public void user_clicks_on_edit_button_of_test_results_item_with_id(String testResultsItemId) {
+        patientsListWebTable=new PatientWebTable(locatorTableHeader,locatorTableBody);
+
+        patientsListWebTable.loadCurrentPage(Driver.getDriver().findElements(locatorTableBody)); //load current page
+        Map<String,WebElement> testResultsItemDataRow=patientsListWebTable.getWebTableData().get(testResultsItemId);
+        WebElement buttonsColumn=testResultsItemDataRow.get("buttons");
+        Driver.wait(1);
+        WebElement editResults=buttonsColumn.findElements(By.tagName("a")).get(0);
+        editResults.click();
+
+    }
+    @Then("user verifies that Create or edit a Test Result is displayed")
+    public void user_verifies_that_create_or_edit_a_test_result_is_displayed() {
+        Assert.assertTrue(testResultCreateOrEditPage.inputId.isDisplayed());
+        Assert.assertTrue(testResultCreateOrEditPage.inputDate.isDisplayed());
+        Assert.assertTrue(testResultCreateOrEditPage.inputResult.isDisplayed());
+        Assert.assertTrue(testResultCreateOrEditPage.inputResultCreatedDate.isDisplayed());
+    }
+
+    @Then("user enters valid data for Result {string} and {string} description")
+    public void user_enters_valid_data_for_result_and_description(String result, String description) {
+        testResultCreateOrEditPage.inputResult.clear();
+        testResultCreateOrEditPage.inputDescription.clear();
+        Driver.waitAndSendText(testResultCreateOrEditPage.inputResult,result);
+        Driver.waitAndSendText(testResultCreateOrEditPage.inputDescription,description);
+    }
+    @Then("user clicks Save button")
+    public void user_clicks_save_button() {
+        Driver.waitAndClickElement(testResultCreateOrEditPage.btnSave,5);
+        Driver.wait(2);
+    }
+    @Then("verify that a successfully saves message with text {string} for Test Results Item with id {string}")
+    public void verify_that_a_successfully_saves_message_with_text_for_test_results_item_with_id(String message, String testItemId) {
+        String fullMessage = message+ " "+testItemId;
+        Driver.waitForVisibility(testResults.savedMassageForTestResult,10);
+        Assert.assertTrue(testResults.savedMassageForTestResult.isDisplayed());
+        Assert.assertEquals(fullMessage,testResults.savedMassageForTestResult.getText());
+
+    }
+
+    @When("user enters valid data for Date {string} and {string} time")
+    public void user_enters_valid_data_for_date_and_time(String datePart, String timePart) {
+        testResultCreateOrEditPage.inputDate.clear();
+        Driver.waitAndSendText(testResultCreateOrEditPage.inputDate,datePart);
+        testResultCreateOrEditPage.inputDate.sendKeys(Keys.TAB);
+        Driver.waitAndSendText(testResultCreateOrEditPage.inputDate,timePart);
+    }
+
+    @When("user enters valid data for Created Date {string} and {string} Created time")
+    public void user_enters_valid_data_for_created_date_and_created_time(String datePart, String timePart) {
+        testResultCreateOrEditPage.inputResultCreatedDate.clear();
+        Driver.waitAndSendText(testResultCreateOrEditPage.inputResultCreatedDate,datePart);
+        testResultCreateOrEditPage.inputResultCreatedDate.sendKeys(Keys.TAB);
+        Driver.waitAndSendText(testResultCreateOrEditPage.inputResultCreatedDate,timePart);
+    }
+
+
 }

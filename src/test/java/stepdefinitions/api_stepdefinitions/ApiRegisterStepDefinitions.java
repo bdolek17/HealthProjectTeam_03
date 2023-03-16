@@ -19,12 +19,12 @@ public class ApiRegisterStepDefinitions {
         HashMap<String,Object> payloadValue=new HashMap<>();
 
         payloadValue.put("activated",true);
-        payloadValue.put("email","ptient04.t03@medunna.com");
+        payloadValue.put("email","staff11.t03@medunna.com");
         payloadValue.put("firstName","Team 03");
         payloadValue.put("lastName","03");
-        payloadValue.put("login","patient04.03");
+        payloadValue.put("login","staff11.t03");
         payloadValue.put("password","Team03+");
-        payloadValue.put("ssn","333-33-5338");
+        payloadValue.put("ssn","333-33-5311");
 
 
 

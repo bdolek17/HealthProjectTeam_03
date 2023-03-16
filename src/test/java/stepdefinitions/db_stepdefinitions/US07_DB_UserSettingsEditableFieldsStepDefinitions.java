@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class US07_DB_UserSettingsEditableFieldsStepDefinitions {
 
-    List<Map<String,Object>> resultSetAsMapObject;
+    //List<Map<String,Object>> resultSetAsMapObject;
 
     @Given("connect to medunna database")
     public void connect_to_medunna_database() {
@@ -32,16 +32,18 @@ public class US07_DB_UserSettingsEditableFieldsStepDefinitions {
         //System.out.println("---DBUtils.getQueryResultList(myQuery)---");
         //System.out.println(rowList);
 
-        resultSetAsMapObject=DBUtils.getQueryResultMap(myQuery);
+        //resultSetAsMapObject=DBUtils.getQueryResultMap(myQuery);
+        SharedDataForDb.sharedResultSetAsMapObject=DBUtils.getQueryResultMap(myQuery);;
+
         //System.out.println("---DBUtils.getQueryResultMap(myQuery)---");
         //System.out.println(resultSetAsMapObject);
     }
     @Given("verify resultset {string} column contains {string} data")
     public void verify_resultset_column_contains_data(String queryFiledName, String expectedValue) {
-        if(resultSetAsMapObject.size()==0){
+        if(SharedDataForDb.sharedResultSetAsMapObject.size()==0){
             Assert.fail("Assertion Failed");
         }else {
-            String actualValue=resultSetAsMapObject.get(0).get(queryFiledName).toString();
+            String actualValue=SharedDataForDb.sharedResultSetAsMapObject.get(0).get(queryFiledName).toString();
             Assert.assertEquals(expectedValue,actualValue);
         }
     }

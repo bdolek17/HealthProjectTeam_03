@@ -15,7 +15,7 @@ public class US16_DB_PatientCreationProcesses {
     public void get_record_from_with_the_columns_where_column_has_created_id_value(String table, String columns, String filterField) {
         String patientID= LogUtilities.getAllCreatedPatientIds().get(0);
         String myQuery="Select "+columns+" From "+table+" Where "+filterField+"="+patientID;  //id is  number
-        DB_CommonDefinitions.resultSetAsMapObject = DBUtils.getQueryResultMap(myQuery);
+        SharedDataForDb.sharedResultSetAsMapObject = DBUtils.getQueryResultMap(myQuery);
     }
 
     @Then("verify resultset fallowing values")
@@ -24,7 +24,7 @@ public class US16_DB_PatientCreationProcesses {
 
         Map<String,String> expectedData=data.get(0);
 
-        List<Map<String,Object>> resultSet=DB_CommonDefinitions.resultSetAsMapObject;
+        List<Map<String,Object>> resultSet= SharedDataForDb.sharedResultSetAsMapObject;
         if(resultSet.size()==0){
             Assert.fail("Assertion Failed");
         }else {
@@ -43,10 +43,10 @@ public class US16_DB_PatientCreationProcesses {
         if(deletedPatientId.length()==0) {deletedPatientId=filterFieldValue.toString();}
 
         String myQuery="Select "+columns+" From "+table+" Where "+filterField+"="+deletedPatientId;
-        DB_CommonDefinitions.resultSetAsMapObject = DBUtils.getQueryResultMap(myQuery);
+        SharedDataForDb.sharedResultSetAsMapObject = DBUtils.getQueryResultMap(myQuery);
     }
     @Then("verify resultset is empty")
     public void verify_resultset_is_empty() {
-        Assert.assertEquals(0,DB_CommonDefinitions.resultSetAsMapObject.size());
+        Assert.assertEquals(0, SharedDataForDb.sharedResultSetAsMapObject.size());
     }
 }

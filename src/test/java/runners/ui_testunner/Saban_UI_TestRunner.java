@@ -15,11 +15,19 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        //tags = "@US16_TC01"
-        //tags = "@US16_TC02"
-        //tags = "@US16_PatientCreationAutherization"
-        //tags = "@DeleteCreatedPatients"
-        tags = "@US23_TC06_DB"
+        //tags = "@US23_TC01"
+        tags = "@US23_TC02"
+        //tags = "@US23_TC03"
+        //tags = "@US23_TC04"
+        //tags = "@US23_TC05_API"
+        //tags = "@US23_TC06_DB"
+        //tags = "@US23_TC07"
+        //tags = "@US23_TC08_API"
+        //tags = "@US23_TC09_DB"
+        //tags = "@US23_TC10"
+        //tags = "@US23_TC11_API"
+        //tags = "@US23_TC12_DB"
+
 
 //        ------------------------------------------------------
 //        ------------------------------------------------------

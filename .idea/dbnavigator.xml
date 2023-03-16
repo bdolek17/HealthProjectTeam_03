@@ -24,7 +24,18 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="e432adfc-b4be-4d74-9ae5-a25af5a65ecd" dataset="public.staff" active-filter-id="ef0644a5-22c0-41d9-b608-9662c4975322">
+      <filter id="ef0644a5-22c0-41d9-b608-9662c4975322" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
     <filter-actions connection-id="e432adfc-b4be-4d74-9ae5-a25af5a65ecd" dataset="public.c_test_result" active-filter-id="" />
+    <filter-actions connection-id="e432adfc-b4be-4d74-9ae5-a25af5a65ecd" dataset="public.jhi_user" active-filter-id="217f1c82-96a1-42a2-8e33-16040ac215b5">
+      <filter id="addee14e-14f9-4acb-a5ba-50a564168b4e" name="staff11.t03" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="login" operator="=" value="staff11.t03" active="true" />
+      </filter>
+      <filter id="217f1c82-96a1-42a2-8e33-16040ac215b5" name="staff03.t03" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="login" operator="=" value="staff03.t03" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -46,7 +57,7 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="medunna.com" />
+          <host value="157.230.48.97" />
           <port value="5432" />
           <database value="medunna_db_v2" />
           <type value="USER_PASSWORD" />
