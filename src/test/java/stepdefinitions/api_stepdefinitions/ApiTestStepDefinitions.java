@@ -23,14 +23,14 @@ public class ApiTestStepDefinitions {
     @Given("user sets the expected data")
     public void user_sets_the_expected_data() {
         account=new Account();
-        account.setActivated(false);
-        account.setCreatedBy("Shaban");
-        account.setEmail("shaban@azak.com");
+        account.setActivated(true);
+        account.setEmail("staff11.t03@medunna.com");
         account.setFirstName("Shaban");
         account.setLastName("Azak");
-        account.setLogin("shabanazak.t03");
-        account.setPassword("Shaban03+");
-        account.setSsn("333-13-1101");
+        account.setLogin("staff11.t03");
+        account.setPassword("Team03+");
+        account.setSsn("333-33-5311");
+
     }
     @When("user sends the POST request and gets the response")
     public void user_sends_the_post_request_and_gets_the_response() {
